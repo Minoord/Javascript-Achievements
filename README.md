@@ -15,5 +15,5 @@ In het het bestand  [index.html](index.html) houd je een overzicht bij van wat j
 
 Plaats in deze readme een link naar het index bestand op je ma-cloud site.  
 **HIER de link plaatsen**
-:/Users/Minoo/OneDrive/Bureaublad/MA/Bewijzenmap/Periode%201/Unit%202/siteMa-cloud/F1M2JavaScript/Javascript-Achievements/index.html 
+
 
