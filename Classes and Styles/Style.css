@@ -1,0 +1,21 @@
+body {
+    background-color: #333333;
+} 
+  
+.rood {
+    color:#FE2E2E ;
+    font-size: 25px;
+}
+.oranje {
+    color:#FE9A2E ;
+    font-size: 20px;}
+.geel {
+    color:#F7FE2E ;
+    font-size: 15px;}
+.groen {
+    color:#F7FE2E ;
+    font-size: 10px;}
+
+.blauw {
+    color: #2ECCFA;
+    font-size: 5px;} 
