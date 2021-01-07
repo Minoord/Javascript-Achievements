@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Goedemorgen</title>
+</head>
+
+<body>
+  <h1>Tijd met javaScript</h1>
+  <input type="button" value="Click me" id= "mijnButton" />  
+  <script>
+    function DisplayAlert() {
+      let datum = new Date ();
+      var newLine = "\r\n"
+      var msg = "Deze website is van Michelle Noordeloos"
+      msg += newLine;
+      msg += "Student van het Mediacollege ";
+      msg += newLine
+      msg += datum 
+    alert(msg);
+    }
+
+
+   
+   let mijnButton = document.getElementById('mijnButton');
+   mijnButton.addEventListener('click', ()=>{
+     DisplayAlert()
+   } ) 
+   
+  </script>
+</body>
+</html>

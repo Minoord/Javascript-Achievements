@@ -1,0 +1,13 @@
+Cube room: <a-gltf-model src="assets/models/cube-room/cube-room.gltf" visible="" width="1" height="1" position="-2.63876 0.21587 -4.6605" rotation="0 -36.95 0" scale="0.40083 0.40083 0.40083" id="webxrElement2" gltf-model="assets/models/cube-room/cube-room.gltf"></a-gltf-model>
+
+Kikker:
+<a-image src="assets/images/sampleImage.jpg" color="" visible="" width="1" height="1" position="1.16132 0.60636 -4.8495" rotation="" scale="" id="webxrElement5" material="color: #FFF" geometry=""></a-image>
+
+mcplayer:
+<a-gltf-model src="assets/models/minecraft/scene.gltf" visible="" width="1" height="1" position="4.32912 1.31293 -5.6555" rotation="0 -36.95 0" scale="0.1 0.1 0.1" id="webxrElement1" gltf-model="assets/models/minecraft/scene.gltf"></a-gltf-model>
+
+bal:
+<a-gltf-model src="assets/models/minecraft/scene.gltf" visible="" width="1" height="1" position="4.32912 1.31293 -5.6555" rotation="0 -36.95 0" scale="0.1 0.1 0.1" id="webxrElement1" gltf-model="assets/models/minecraft/scene.gltf"></a-gltf-model>
+
+lisse:
+<a-image src="assets/images/Lisse-049.jpg" color="" visible="" width="1" height="1" position="1.19513 1.84795 -5.26699" rotation="" scale="" id="webxrElement6" material="color: #FFF" geometry=""></a-image>
