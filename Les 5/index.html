@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Scroll me!</title>
+    </head>
+    <body>
+         <h1 id = "tekst" >Scroll On Me</h1>
+         <button id="ResetButton">Reset Button</button>
+    </body>
+    <script>
+        document.getElementById("tekst").addEventListener("wheel", FunctionScroll);
+        document.getElementById("ResetButton").addEventListener("click", FunctionButton);
+
+        //AddEventListener !
+        function FunctionScroll(){ 
+            h1 = document.getElementById("tekst") ;
+            h1.addEventListener("wheel", ()=>{ h1.innerHTML += "!" });
+        }
+
+        function FunctionButton(){
+            h1Reset = document.getElementById("tekst")
+            ButtonR = document.getElementById("ResetButton")
+            ButtonR.addEventListener("click", ()=>{ h1Reset.innerHTML = "Scroll On Me!" });
+        }
+
+     
+    </script> 
+</html>
