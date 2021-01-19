@@ -1,27 +1,32 @@
-const delayTime = 2000; // wachttijd voor de volgende vraag
+const delayTime = 4000; // wachttijd voor de volgende vraag
 const myQuestion = document.getElementById('myQuestion');
 const myAnswer = document.getElementById('myAnswer');
 const quizWrapper = document.getElementById('quizWrapper');
 const questionBox = document.getElementById('questionBox');
 const resultBox = document.getElementById('resultBox');
 const quizTitle = document.getElementById('quizTitle');
+const quizPrijs = "Win.jpg"
 
 let counter = 0; // aantal mutliple choice vragen
 let quiz; // object met quiz vragen
 let playerData = {}; // object, hierin worden de game gegevens opgeslagen
+let quizNummer = 1; // voorbereiden automatisch 2e quiz startem
+
 
 function init(){
-    quiz = quiz1; // kies de quiz
-    //quiz = quiz2; // kies de quiz
-    initQuiz(); // start de quiz
+  quiz = quiz1; // kies de quiz
+  // quiz = quiz2; // kies de quiz
+  initQuiz(); // start de quiz
 }
 
 function initQuiz(){
+  questionBox.style.display = "block"; // reset alle player game variabelen
+  resultBox.style.display = "none"; // reset alle player game variabelen
+  counter = 0; // reset alle player game variabelen
   playerData.goodAnswers = 0; // reset alle player game variabelen
   playerData.wrongAnswers = 0; // reset alle player game variabelen
   playerName = ""; // toekomstige uitbreiding naam speler opvragen
   resultBox.style.display = "none"; // verberg de resultbox
-  quizWrapper.style.background = "none";
   quizTitle.innerHTML=quiz.quizMetaData.title; // laat titel van quiz zien
   prepareQuestions(); // start de quiz
 }
@@ -29,6 +34,7 @@ function initQuiz(){
 function prepareQuestions() {
   questionBox.className = "questionBox-new"; // voorbereiden animatie
   let quizImage = quiz.quizMetaData.imageURI; // image laden
+  quizWrapper.style.background = "";
   quizWrapper.style.backgroundImage = "url("+ quizImage + ")"; // image laden
   quizWrapper.style.backgroundRepeat = "no-repeat"; // image positioneren
   quizWrapper.style.backgroundPosition = "right"; // image positioneren
@@ -77,14 +83,25 @@ function evaluate(evt) {
 
 function finishQuiz() {
   // afsluiting quiz geef feedback
-  questionBox.style.display = "none";
-  resultBox.style.display = "block";
-  quizWrapper.style.background = "white";
-  resultBox.innerHTML = "<h2>Jouw resultaat <br>goede antwoorden " + playerData.goodAnswers + "<br>foute antwoorden " + playerData.wrongAnswers + "</h2>";
-  if (quiz == quiz1){
-     quiz = quiz2;
-     initQuiz(); 
+  if  (playerData.goodAnswers == 3){
+    questionBox.style.display = "none";
+    resultBox.style.display = "block";
+    quizWrapper.style.background = "white";
+    resultBox.innerHTML = "<h2>Jouw resultaat <br>goede antwoorden " + playerData.goodAnswers + "<br>foute antwoorden " + playerData.wrongAnswers + "Alles goed!, Topper. Ga volg deze link naar uw prijs https://www.youtube.com/watch?v=cvh0nX08nRw" +  "</h2>";
+  }else{
+    questionBox.style.display = "none";
+    resultBox.style.display = "block";
+    quizWrapper.style.background = "white";
+    resultBox.innerHTML = "<h2>Jouw resultaat <br>goede antwoorden " + playerData.goodAnswers + "<br>foute antwoorden " + playerData.wrongAnswers + "<br>Helaas, volgende keer beter" + "</h2>";
   }
+
+  if (quiz == quiz1){
+    quiz = quiz2
+    setTimeout(initQuiz, delayTime);
+  }
+
+
+  
 }
 
 init(); // start it
